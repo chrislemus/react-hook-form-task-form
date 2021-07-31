@@ -5,10 +5,19 @@ import TaskList from './components/TaskList';
 
 export default function App() {
   const [tasks, setTasks] = useState(defaultTasks);
+
+  const completeTaskBtnHandler = (taskId) => {
+    const updatedTasks = tasks.map((task) => {
+      const completed = !task.completed;
+      return task.id === taskId ? { ...task, completed } : task;
+    });
+    setTasks(updatedTasks);
+  };
+
   return (
     <div className="container">
       <NewTaskForm />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} completeTaskBtnHandler={completeTaskBtnHandler} />
     </div>
   );
 }
