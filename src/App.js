@@ -1,8 +1,19 @@
 // import './styles/app.css';
-
+import { useState } from 'react';
 import NewTaskForm from './components/NewTaskForm';
+import TaskList from './components/TaskList';
 
-const tasks = [
+export default function App() {
+  const [tasks, setTasks] = useState(defaultTasks);
+  return (
+    <div className="container">
+      <NewTaskForm />
+      <TaskList tasks={tasks} />
+    </div>
+  );
+}
+
+const defaultTasks = [
   {
     id: 1,
     completed: false,
@@ -10,18 +21,3 @@ const tasks = [
   },
   { id: 2, completed: true, task: 'buy ketchup' },
 ];
-function App() {
-  return (
-    <div className="container">
-      <NewTaskForm />
-      {tasks.map(({ task, completed }) => (
-        <div className={`task ${completed && 'task--completed'}`}>
-          <button className="task__button" />
-          <p>{task}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default App;
