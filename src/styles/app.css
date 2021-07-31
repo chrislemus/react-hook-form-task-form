@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.new-task-input-wrapper {
+.new-task-form {
   flex-direction: column;
   display: flex;
   width: 100%;
@@ -24,7 +24,7 @@
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.05);
 }
 
-.new-task-input-wrapper button {
+.new-task-form button {
   background: rgb(0, 183, 255);
   color: white;
   border: none;
@@ -32,7 +32,7 @@
   border-radius: 3px;
 }
 
-input {
+.new-task-form input {
   border: 1px solid rgb(214, 214, 214);
   margin-bottom: 1rem;
   border-radius: 0.2rem;
@@ -40,6 +40,34 @@ input {
   outline: none;
 }
 
+.task {
+  position: relative;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  padding: 0.5rem 0.5rem 0.5rem 2.8rem;
+  align-items: center;
+}
+
+.task--completed > * {
+  opacity: 0.5;
+}
+.task--completed button {
+  background: rgb(196, 196, 196);
+}
+
+.task__button {
+  position: absolute;
+  border: 1px solid rgb(131, 131, 131);
+  left: 0.8rem;
+  top: 35%;
+  border-radius: 50%;
+  height: 1.2rem;
+  width: 1.2rem;
+  background: none;
+}
+
+/* .task__label {
+  margin-left: 2.3rem;
+} */
 /* .fab {
   width: 3rem;
   height: 3rem;
