@@ -41,28 +41,40 @@
 }
 
 .task {
-  position: relative;
   border-bottom: 1px solid rgb(197, 197, 197);
-  padding: 0.5rem 0.5rem 0.5rem 2.8rem;
+  padding: 0.5rem 1rem 0.5rem;
+  display: flex;
   align-items: center;
+}
+.task__label {
+  flex-grow: 1;
+  padding: 0 1rem;
 }
 
 .task--completed > * {
   opacity: 0.5;
 }
-.task--completed button {
+.task button {
+  cursor: pointer;
+}
+.task--completed .task__complete-button {
   background: rgb(196, 196, 196);
 }
 
-.task__button {
-  position: absolute;
+.task__complete-button {
   border: 1px solid rgb(131, 131, 131);
-  left: 0.8rem;
-  top: 35%;
   border-radius: 50%;
   height: 1.2rem;
   width: 1.2rem;
   background: none;
+}
+.task__delete-button {
+  border: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  background: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 /* .task__label {
