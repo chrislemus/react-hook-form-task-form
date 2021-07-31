@@ -1,0 +1,60 @@
+* {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: relative;
+  margin: 3rem auto 0;
+  box-shadow: 0 0px 5.3px rgba(0, 0, 0, 0.044),
+    0 0px 17.9px rgba(0, 0, 0, 0.066), 0 0px 80px rgba(0, 0, 0, 0.11);
+  border-radius: 1rem;
+  width: 280px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-task-input-wrapper {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  padding: 1rem 1rem 0.5rem;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.05);
+}
+
+.new-task-input-wrapper button {
+  background: rgb(0, 183, 255);
+  color: white;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+input {
+  border: 1px solid rgb(214, 214, 214);
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  padding: 6px;
+  outline: none;
+}
+
+/* .fab {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+
+  background-color: rgb(2, 162, 255);
+  color: white;
+}
+
+.fab:hover {
+  opacity: 0.8;
+  cursor: pointer;
+} */
+/* 
+:focus {
+  background: springgreen;
+} */
