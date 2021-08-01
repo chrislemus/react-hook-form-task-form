@@ -36,10 +36,6 @@ button:hover {
   border-radius: 3px;
 }
 
-.new-task-form__submit-button:disabled {
-  opacity: 0.5;
-}
-
 .new-task-form input {
   border: 1px solid rgb(214, 214, 214);
   margin-bottom: 0.5rem;

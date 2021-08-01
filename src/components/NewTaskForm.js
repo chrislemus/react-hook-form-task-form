@@ -33,11 +33,7 @@ export default function NewTaskForm({ newTaskHandler }) {
           <li>{error.message}</li>
         ))}
       </ul>
-      <button
-        type="submit"
-        disabled={!formState.isValid || !formState.isDirty}
-        className="new-task-form__submit-button"
-      >
+      <button type="submit" className="new-task-form__submit-button">
         add
       </button>
     </form>
