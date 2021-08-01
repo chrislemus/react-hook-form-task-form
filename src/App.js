@@ -44,7 +44,7 @@ const defaultTasks = [
   {
     id: 1,
     completed: false,
-    label: 'buy pickle buy pickle buy pickle buy pickle',
+    label: 'buy pickle',
   },
   { id: 2, completed: true, label: 'buy ketchup' },
 ];
