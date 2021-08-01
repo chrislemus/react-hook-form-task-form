@@ -45,7 +45,6 @@ button:hover {
 }
 
 .new-task-form {
-  border: 1px solid rgb(214, 214, 214);
   margin-bottom: 1rem;
   border-radius: 0.2rem;
   padding: 6px;
