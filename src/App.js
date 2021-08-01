@@ -1,4 +1,3 @@
-// import './styles/app.css';
 import { useState } from 'react';
 import NewTaskForm from './components/NewTaskForm';
 import TaskList from './components/TaskList';
@@ -8,12 +7,16 @@ const uniqueId = () => Math.floor(Math.random() * Date.now());
 export default function App() {
   const [tasks, setTasks] = useState(defaultTasks);
 
-  const completeTaskBtnHandler = (taskId) => {
+  const completeTaskHandler = (taskId) => {
     const updatedTasks = tasks.map((task) => {
       const completed = !task.completed;
       return task.id === taskId ? { ...task, completed } : task;
     });
     setTasks(updatedTasks);
+  };
+
+  const deleteTaskHandler = (taskId) => {
+    setTasks(tasks.filter(({ id }) => taskId !== id));
   };
 
   const newTaskHandler = (label) => {
@@ -28,7 +31,11 @@ export default function App() {
   return (
     <div className="container">
       <NewTaskForm newTaskHandler={newTaskHandler} />
-      <TaskList tasks={tasks} completeTaskBtnHandler={completeTaskBtnHandler} />
+      <TaskList
+        tasks={tasks}
+        completeTaskHandler={completeTaskHandler}
+        deleteTaskHandler={deleteTaskHandler}
+      />
     </div>
   );
 }
