@@ -2,6 +2,11 @@ import { useState } from 'react';
 import NewTaskForm from './components/NewTaskForm';
 import TaskList from './components/TaskList';
 
+const defaultTasks = [
+  { id: 1, completed: false, label: 'buy pickle' },
+  { id: 2, completed: true, label: 'buy ketchup' },
+];
+
 const uniqueId = () => Math.floor(Math.random() * Date.now());
 
 export default function App() {
@@ -39,12 +44,3 @@ export default function App() {
     </div>
   );
 }
-
-const defaultTasks = [
-  {
-    id: 1,
-    completed: false,
-    label: 'buy pickle',
-  },
-  { id: 2, completed: true, label: 'buy ketchup' },
-];

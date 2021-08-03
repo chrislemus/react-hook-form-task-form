@@ -24,16 +24,16 @@ button:hover {
   flex-direction: column;
   display: flex;
   width: 100%;
-  padding: 1rem 1rem 0.5rem;
+  padding: 1rem;
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.05);
 }
 
-.new-task-form__submit-button {
+.new-task-form button {
   background: rgb(0, 183, 255);
   color: white;
   border: none;
   padding: 0.3rem;
-  border-radius: 3px;
+  border-radius: 0.2rem;
 }
 
 .new-task-form input {
@@ -44,11 +44,10 @@ button:hover {
   outline: none;
 }
 
-.new-task-form {
-  margin-bottom: 1rem;
-  border-radius: 0.2rem;
-  padding: 6px;
-  outline: none;
+.error-messages {
+  margin: 0 auto 1rem;
+  width: 100%;
+  color: rgb(218, 0, 0);
 }
 
 .task {
@@ -88,16 +87,5 @@ button:hover {
   height: 1.2rem;
   width: 1.2rem;
   background: none;
-  cursor: pointer;
   padding: 0;
-}
-
-.new-task-form__error-messages {
-  margin: 0 auto 1rem;
-  width: 100%;
-}
-
-.new-task-form__error-messages li {
-  font-size: 10px;
-  color: rgb(218, 0, 0);
 }

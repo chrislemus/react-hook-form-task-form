@@ -2,13 +2,11 @@ import { useForm } from 'react-hook-form';
 export default function NewTaskForm({ newTaskHandler }) {
   const { register, handleSubmit, reset, formState, clearErrors } = useForm({
     shouldUnregister: true,
-    defaultValues: {
-      label: '',
-    },
+    defaultValues: { label: '' },
   });
+
   const onSubmit = (data) => {
-    const taskLabel = data.label;
-    newTaskHandler(taskLabel);
+    newTaskHandler(data.label);
     reset();
     clearErrors();
   };
@@ -28,14 +26,12 @@ export default function NewTaskForm({ newTaskHandler }) {
           },
         })}
       />
-      <ul className="new-task-form__error-messages">
+      <ul className="error-messages">
         {errors.map((error) => (
           <li>{error.message}</li>
         ))}
       </ul>
-      <button type="submit" className="new-task-form__submit-button">
-        add
-      </button>
+      <button type="submit">add</button>
     </form>
   );
 }
