@@ -26,11 +26,13 @@ export default function NewTaskForm({ newTaskHandler }) {
           },
         })}
       />
-      <ul className="error-messages">
-        {errors.map((error) => (
-          <li>{error.message}</li>
-        ))}
-      </ul>
+      {errors.length > 0 && (
+        <ul className="error-messages">
+          {errors.map((error) => (
+            <li>{error.message}</li>
+          ))}
+        </ul>
+      )}
       <button type="submit">add</button>
     </form>
   );
